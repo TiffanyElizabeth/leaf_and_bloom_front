@@ -5,11 +5,13 @@ import TeaDetail from "./pages/TeaDetail";
 import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
 import DefaultLayout from "./layouts/DefaultLayout";
+import DesignSystem from "./pages/DesignSystem";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/design-system" element={<DesignSystem />} />
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

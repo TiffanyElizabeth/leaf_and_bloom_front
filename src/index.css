@@ -1,0 +1,85 @@
+/* custom typography */
+/* Custom Colors */
+:root {
+    --tea-brown: #4B3417;
+    --tea-black: #000000;
+}
+
+/* Headings */
+.text-h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--tea-brown);
+}
+
+.text-h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--tea-brown);
+}
+
+.text-h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--tea-black);
+}
+
+/* Body text */
+.text-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--tea-black);
+}
+
+/* Override Bootstrap body font */
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    color: var(--tea-black);
+}
+
+/* Override Bootstrap heading fonts */
+h1,
+h2 {
+    font-family: 'Cinzel', serif !important;
+    color: var(--tea-brown);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif !important;
+    color: var(--tea-black);
+}
+
+/*nav-bar custom*/
+.custom-navbar {
+    border-bottom: 8px solid #B0C4A5;
+}
+
+/*sage background*/
+.bg-sage {
+    background-color: #B0C4A5;
+}
+
+
+.card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.card-hover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(144, 172, 123, 0.5);
+    /* sage border
+    border: 2px solid #B0C4A5;
+    */
+}
+
+.link:hover {
+    transform: scale(1.03);
+    color: var(--tea-brown);
+}
