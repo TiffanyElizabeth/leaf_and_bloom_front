@@ -1,23 +1,26 @@
 import { Link } from "react-router";
 import Text from "./ui/Text";
 import { PiFlowerLotus } from "react-icons/pi";
+import useCategories from "../hooks/useCategories";
 
 export default function Footer() {
+    const categories = useCategories();
+
     return (
-        <footer style={{ backgroundColor: "#B0C4A5" }} className="text-dark py-5 mt-5 w-100">
+        <footer style={{ backgroundColor: "#B0C4A5" }} className="text-dark py-5 w-100">
             <div className="container">
                 <div className="row">
 
                     <div className="col-12 col-md-3">
-                        <Link to="/" className="text-decoration-none text-dark">
-                            <Text level={1} className="mb-0" style={{ fontFamily: "'Cinzel', serif" }}>
-                                Leaf & <br /> Bloom <br />
-                                <PiFlowerLotus className="ms-2" size={28} />
-                            </Text>
 
-                        </Link>
+                        <Text level={1} className="mb-0" style={{ fontFamily: "'Cinzel', serif" }}><Link to="/" className="text-decoration-none text-dark">
+                            Leaf & <br /> Bloom </Link><br />
+                            <Link to="http://localhost:8080/login"><PiFlowerLotus className="ms-2 text-decoration-none text-dark" size={28} /></Link>
+                        </Text>
 
-                        <Link to="http://localhost:8080/login"><PiFlowerLotus className="ms-2" size={28} /></Link>
+
+
+
                     </div>
 
 
@@ -32,12 +35,17 @@ export default function Footer() {
 
 
                     <div className="col-12 col-md-3 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
-                        <Text level={4} className="link"><a href="/teas?category=1" className="text-dark text-decoration-none">White Teas</a></Text>
-                        <Text level={4} className="link"><a href="/teas?category=2" className="text-dark text-decoration-none">Green Teas</a></Text>
-                        <Text level={4} className="link"><a href="/teas?category=3" className="text-dark text-decoration-none">Oolong Teas</a></Text>
-                        <Text level={4} className="link"><a href="/teas?category=4" className="text-dark text-decoration-none">Black Teas</a></Text>
-                        <Text level={4} className="link"><a href="/teas?category=5" className="text-dark text-decoration-none">Herbal Teas</a></Text>
-                        <Text level={4} className="link"><a href="/teas?category=6" className="text-dark text-decoration-none">Rooibos Teas</a></Text>
+                        {categories.map((cat) => (
+                            <Text key={cat.id} level={4} className="link">
+                                <Link
+                                    to={`/teas?category=${cat.id}`}
+                                    className="text-dark text-decoration-none"
+                                >
+                                    {cat.name} Teas
+                                </Link>
+                            </Text>
+                        ))
+                        }
                     </div>
 
 

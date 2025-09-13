@@ -83,3 +83,29 @@ h6 {
     transform: scale(1.03);
     color: var(--tea-brown);
 }
+
+/*buttons*/
+.btn-1 {
+    border: 2px solid #B0C4A5;
+    background-color: white;
+    cursor: pointer;
+    color: #B0C4A5;
+}
+
+.btn-1:hover {
+    background-color: #B0C4A5;
+    color: white;
+}
+
+.btn-2 {
+    background-color: #B0C4A5;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #B0C4A5;
+}
+
+.btn-2:hover {
+    border: 2px solid #B0C4A5;
+    background-color: white;
+    color: #B0C4A5;
+}

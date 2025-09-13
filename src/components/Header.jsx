@@ -3,29 +3,26 @@ import { Link, useNavigate } from "react-router";
 import { FaSearch } from "react-icons/fa";
 import { PiFlowerLotus } from "react-icons/pi";
 import Text from "./ui/Text";
+import Button from "./ui/Button";
+import useCategories from "../hooks/useCategories";
 
 export default function Header() {
     const [searchTerm, setSearchTerm] = useState("");
     const navigate = useNavigate();
+    const categories = useCategories();
+
 
     const handleSearch = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // prevent refresh
         if (searchTerm.trim()) {
-            navigate(`/teas?search=${encodeURIComponent(searchTerm.trim())}`);
-            setSearchTerm(""); // optional: clear input
+            navigate(`/teas?search=${encodeURIComponent(searchTerm.trim())}`); // go to search results
+            setSearchTerm(""); // clear input
         } else {
             navigate("/teas");
         }
     };
 
-    const categories = [
-        { id: 1, name: "White" },
-        { id: 2, name: "Green" },
-        { id: 3, name: "Oolong" },
-        { id: 4, name: "Black" },
-        { id: 5, name: "Herbal" },
-        { id: 6, name: "Rooibos" },
-    ];
+
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light px-3 custom-navbar">
@@ -103,9 +100,9 @@ export default function Header() {
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
-                        <button className="btn btn-outline-success" type="submit">
+                        <Button level={1} type="submit">
                             <FaSearch />
-                        </button>
+                        </Button>
                     </form>
                 </div>
             </div>
