@@ -14,7 +14,7 @@ export default function About() {
 
             <Container>
                 <div className="text-center mb-4">
-                    <Text level={1} className="display-5">About Us</Text>
+                    <Text level={5}>About Us</Text>
                     <DividingLine />
                     <Text level={4}>At Leaf & Bloom, we believe tea is more than a drink — it is a ritual of pause, connection, and care. Our small-batch, ethically sourced loose-leaf teas are thoughtfully curated to bring you pure, vibrant flavors while honoring the people and places behind every leaf. Whether it is your first cup in the morning or a quiet moment in the afternoon, each blend is crafted to help you slow down, breathe, and savor time for yourself. <br /> <br />
 

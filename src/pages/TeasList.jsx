@@ -61,7 +61,7 @@ export default function TeasList() {
 
             <Container>
                 <div className="text-center mb-4">
-                    <h1 className="display-5">{pageTitle}</h1>
+                    <Text level={5}>{pageTitle}</Text>
                     <DividingLine />
                 </div>
 
@@ -90,13 +90,13 @@ export default function TeasList() {
                                             )}
                                             {/* Stock & Price logic */}
                                             {tea.stock === 0 ? (
-                                                <Text level={4} className="mb-0 fw-bold" style={{ color: "#B0C4A5" }}>
+                                                <Text level={6}>
                                                     More on the way!
                                                 </Text>
                                             ) : (
                                                 <div className="d-flex align-items-center gap-2">
                                                     {tea.stock < 4 && (
-                                                        <Text level={4} className="mb-0 fw-bold" style={{ color: "gold" }}>
+                                                        <Text level={7}>
                                                             Low Stock!
                                                         </Text>
                                                     )}

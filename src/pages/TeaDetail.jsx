@@ -35,29 +35,24 @@ export default function TeaDetail() {
                         </Link>
                     </Button>
                 )}
-                {/* Description */}
+                {/* Description & Caffeine info */}
                 <div className="my-3">
-                    <Text level={4}>{tea.description}</Text>
+                    <Text level={4}>{tea.description} {tea.caffeinated ? "Caffeinated" : "Caffeine-free"}</Text>
                 </div>
             </div>
 
-            {/* Caffeine info */}
-            <div className="text-center mb-3">
-                <Text level={4} className="">
-                    {tea.caffeinated ? "Caffeinated" : "Caffeine-free"}
-                </Text>
-            </div>
 
-            {/* Price / Stock info */}
-            <div className="text-center mt-4">
+
+            {/* Price & Stock info */}
+            <div className="text-center mt-3">
                 {tea.stock === 0 ? (
-                    <Text level={4} className="fw-bold" style={{ color: "#B0C4A5" }}>
+                    <Text level={6}>
                         More on the way!
                     </Text>
                 ) : tea.price != null ? (
-                    <div className="d-flex justify-content-center align-items-center gap-3">
+                    <div >
                         {tea.stock < 4 && (
-                            <Text level={4} className="fw-bold" style={{ color: "gold" }}>
+                            <Text level={7}>
                                 Low Stock!
                             </Text>
                         )}

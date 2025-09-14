@@ -3,6 +3,7 @@
 :root {
     --tea-brown: #4B3417;
     --tea-black: #000000;
+    --tea-sage: #B0C4A5;
 }
 
 /* Headings */
@@ -20,19 +21,46 @@
     color: var(--tea-brown);
 }
 
-.text-h3 {
+.text-h5 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--tea-black);
 }
 
+.text-h1-subtle {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--tea-brown);
+
+}
+
 /* Body text */
-.text-body {
+
+.text-body-black {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: var(--tea-black);
+}
+
+.text-body-sage {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--tea-sage);
+    margin-bottom: 0;
+}
+
+.text-body-gold {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: gold;
+    margin-bottom: 0;
+
 }
 
 /* Override Bootstrap body font */
@@ -58,15 +86,26 @@ h6 {
 
 /*nav-bar custom*/
 .custom-navbar {
-    border-bottom: 8px solid #B0C4A5;
+    border-bottom: 8px solid var(--tea-sage);
+}
+
+/* banner image */
+.banner-image {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-bottom: 8px solid var(--tea-sage);
+    background-color: var(--tea-sage);
+    /*in case of image problems*/
+
 }
 
 /*sage background*/
 .bg-sage {
-    background-color: #B0C4A5;
+    background-color: var(--tea-sage);
 }
 
-
+/* hover */
 .card-hover {
     transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
 }
@@ -74,9 +113,6 @@ h6 {
 .card-hover:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(144, 172, 123, 0.5);
-    /* sage border
-    border: 2px solid #B0C4A5;
-    */
 }
 
 .link:hover {
@@ -86,26 +122,26 @@ h6 {
 
 /*buttons*/
 .btn-1 {
-    border: 2px solid #B0C4A5;
+    border: 2px solid var(--tea-sage);
     background-color: white;
     cursor: pointer;
-    color: #B0C4A5;
+    color: var(--tea-sage);
 }
 
 .btn-1:hover {
-    background-color: #B0C4A5;
+    background-color: var(--tea-sage);
     color: white;
 }
 
 .btn-2 {
-    background-color: #B0C4A5;
+    background-color: var(--tea-sage);
     color: white;
     cursor: pointer;
-    border: 2px solid #B0C4A5;
+    border: 2px solid var(--tea-sage);
 }
 
 .btn-2:hover {
-    border: 2px solid #B0C4A5;
+    border: 2px solid var(--tea-sage);
     background-color: white;
-    color: #B0C4A5;
+    color: var(--tea-sage);
 }

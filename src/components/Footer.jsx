@@ -7,13 +7,13 @@ export default function Footer() {
     const categories = useCategories();
 
     return (
-        <footer style={{ backgroundColor: "#B0C4A5" }} className="text-dark py-5 w-100">
+        <footer className="bg-sage py-5 w-100">
             <div className="container">
                 <div className="row">
 
                     <div className="col-12 col-md-3">
 
-                        <Text level={1} className="mb-0" style={{ fontFamily: "'Cinzel', serif" }}><Link to="/" className="text-decoration-none text-dark">
+                        <Text level={1} className="mb-0"><Link to="/" className="text-decoration-none text-dark">
                             Leaf & <br /> Bloom </Link><br />
                             <Link to="http://localhost:8080/login"><PiFlowerLotus className="ms-2 text-decoration-none text-dark" size={28} /></Link>
                         </Text>

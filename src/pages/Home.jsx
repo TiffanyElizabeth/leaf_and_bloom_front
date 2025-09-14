@@ -22,7 +22,7 @@ export default function Home() {
 
             <Container>
                 <div className="text-center mb-5">
-                    <Text level={1} className="display-5">What fills your cup?</Text>
+                    <Text level={5}>What fills your cup?</Text>
                     <DividingLine />
                     <Text level={4}>
                         Explore our tea categories and discover your perfect cup
@@ -50,7 +50,7 @@ export default function Home() {
                                     style={{ height: "200px", objectFit: "cover" }}
                                 />
                                 <div className="card-body">
-                                    <Text level={3} className="mb-0 text-start">
+                                    <Text level={5} className="mb-0 text-start">
                                         {cat.name}
                                     </Text>
                                 </div>
