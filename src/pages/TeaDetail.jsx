@@ -15,8 +15,18 @@ export default function TeaDetail() {
             setTea(response.data)
         })
             .catch((error) => {
-                if (error.status === 404) {
-                    navigate("/404");
+                if (error.response) {
+                    if (error.response.status === 404) {
+                        navigate("/404");
+                    } else if (error.response.status >= 500) {
+                        console.error("Server error:", error.response.status);
+                        alert("Server problem. Try again later.");
+                    }
+                } else if (error.request) {
+                    console.error("No response received:", error.request);
+                    alert("Network error. Please check your connection.");
+                } else {
+                    console.error("Unexpected error:", error.message);
                 }
             });
     };
@@ -43,7 +53,7 @@ export default function TeaDetail() {
 
 
 
-            {/* Price & Stock info */}
+            {/* Price &i don't Stock info */}
             <div className="text-center mt-3">
                 {tea.stock === 0 ? (
                     <Text level={6}>
