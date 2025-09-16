@@ -120,6 +120,10 @@ h6 {
     color: var(--tea-brown);
 }
 
+.link:hover svg {
+    transform: scale(1.03);
+}
+
 /*buttons*/
 .btn-1 {
     border: 2px solid var(--tea-sage);

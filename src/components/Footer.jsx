@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import Text from "./ui/Text";
 import { PiFlowerLotus } from "react-icons/pi";
+import { FaFacebook, FaInstagramSquare } from "react-icons/fa";
 import useCategories from "../hooks/useCategories";
 
 export default function Footer() {
@@ -55,6 +56,11 @@ export default function Footer() {
                         <Text level={4}>Rome, Italy 00198</Text>
                         <Text level={4}>+39 3533533535</Text>
                         <Text level={4}>info@leafandbloom.com</Text>
+
+                        <div className="d-flex gap-2 align-items-center">
+                            <Text level={3}><a href="" className="text-dark text-decoration-none link"><FaFacebook /></a></Text>
+                            <Text level={3}><a href="" className="text-dark text-decoration-none link"><FaInstagramSquare /></a> </Text>
+                        </div>
                     </div>
 
                 </div>
