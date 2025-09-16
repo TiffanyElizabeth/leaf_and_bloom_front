@@ -57,6 +57,14 @@ export default function Text({ level, children, ...props }) { // level = which v
         )
     }
 
+    if (level === 8) { // basic nav bar text 
+        return (
+            <p className="text-body-black mb-0 fs-5" {...props}>
+                {children}
+            </p>
+        );
+    }
+
     // fallback
     return (
         <p className="text-body" {...props}>

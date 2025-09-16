@@ -13,6 +13,7 @@ export default function DesignSystem() {
                 <Text level={5}>Text option 5</Text>
                 <Text level={6}>Text option 6</Text>
                 <Text level={7}>Text option 7</Text>
+                <Text level={8}>Text option 8</Text>
             </section>
             <DividingLine></DividingLine>
             <section>
