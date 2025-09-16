@@ -149,3 +149,9 @@ h6 {
     background-color: white;
     color: var(--tea-sage);
 }
+
+/* home */
+.home-card {
+    height: 200px;
+    object-fit: cover;
+}
