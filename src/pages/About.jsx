@@ -1,3 +1,5 @@
+// About Us page as an exemplary of using reusable components to keep code DRY, clean and easy to approach as well as to maintain consistent styling, layout and branding
+
 import Banner from "../components/ui/Banner"
 import Button from "../components/ui/Button"
 import Container from "../components/ui/Container"
