@@ -62,7 +62,7 @@ export default function TeaDetail() {
                     <Text level={6}>
                         More on the way! {/* if out of stock, no price is visible - only this message */}
                     </Text>
-                ) : tea.price != null ? (
+                ) : tea.price != null ? ( // if tea price is not null and stock is more than 0 
                     <div >
                         {tea.stock < 4 && ( //* if low stock (less than 4), warning message 
                             <Text level={7}>
@@ -73,7 +73,7 @@ export default function TeaDetail() {
                             ${tea.price.toFixed(2)}
                         </Text>
                     </div>
-                ) : null}
+                ) : null} {/* if no price defined, don't show anything */}
             </div>
 
             {/* tea image */}
