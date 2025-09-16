@@ -1,5 +1,7 @@
-export default function Text({ level = 1, children, ...props }) {
-    if (level === 1) {
+// standardizes font throughout my application, having defined custom fonts and colors - makes code cleaner, more consistent and easier to update (if desire to change font or color for example)
+
+export default function Text({ level, children, ...props }) { // level = which version; children = content; ...props = any other attributes (makes it more flexible)
+    if (level === 1) { // big bold header 
         return (
             <h1 className="text-h1" {...props}>
                 {children}
@@ -7,7 +9,7 @@ export default function Text({ level = 1, children, ...props }) {
         );
     }
 
-    if (level === 2) {
+    if (level === 2) { // smaller bold header
         return (
             <h2 className="text-h2" {...props}>
                 {children}
@@ -15,7 +17,7 @@ export default function Text({ level = 1, children, ...props }) {
         );
     }
 
-    if (level === 3) {
+    if (level === 3) { // subtitle text
         return (
             <h5 className="text-h5" {...props}>
                 {children}
@@ -23,7 +25,7 @@ export default function Text({ level = 1, children, ...props }) {
         );
     }
 
-    if (level === 4) {
+    if (level === 4) { // basic body text 
         return (
             <p className="text-body-black" {...props}>
                 {children}
@@ -31,7 +33,7 @@ export default function Text({ level = 1, children, ...props }) {
         );
     }
 
-    if (level === 5) {
+    if (level === 5) { // subtle header 
         return (
             <h1 className="text-h1-subtle display-5" {...props}>
                 {children}
@@ -39,7 +41,7 @@ export default function Text({ level = 1, children, ...props }) {
         );
     }
 
-    if (level === 6) {
+    if (level === 6) { // small sage font
         return (
             <p className="text-body-sage ">
                 {children}
@@ -47,7 +49,7 @@ export default function Text({ level = 1, children, ...props }) {
         )
     }
 
-    if (level === 7) {
+    if (level === 7) { // small gold font 
         return (
             <p className=" text-body-gold ">
                 {children}
