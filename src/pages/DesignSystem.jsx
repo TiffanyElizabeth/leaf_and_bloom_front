@@ -1,3 +1,5 @@
+// a component that is only for development purposes - to see all text styles and button styles in one place, making it easier to ensure consistency
+
 import Text
     from "../components/ui/Text";
 import Button from "../components/ui/Button";
