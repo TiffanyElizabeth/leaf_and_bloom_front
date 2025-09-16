@@ -11,6 +11,11 @@ export default function Button({ level = 1, children, ...props }) { // level = w
             <button className="btn-2" {...props}>{children}</button>
         )
     }
+
+    // fallback - decided to keep multiple if statements due to potential future scalability
+    return (
+        <button className="btn-1" {...props}>{children}</button>
+    );
 }
 
 // used custom styling to tie in with brand - see index.css for detail
