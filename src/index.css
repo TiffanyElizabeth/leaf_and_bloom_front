@@ -155,3 +155,9 @@ h6 {
     height: 200px;
     object-fit: cover;
 }
+
+/* detail */
+.detail-img {
+    max-height: 400px;
+    object-fit: contain;
+}
