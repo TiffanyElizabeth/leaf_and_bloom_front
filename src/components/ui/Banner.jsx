@@ -1,4 +1,4 @@
-// reusable componentso doefor page banners and heros 
+// reusable component for page banners and heros 
 
 import Text from "./Text";
 
