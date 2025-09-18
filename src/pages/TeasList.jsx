@@ -1,7 +1,7 @@
 // shows a list of teas (either full list, or filtered by category, or filtered in acccordance with a searchTerm). it is a dynamic page that adapts based on how the user arrives at the page, displaying clickable product cards in a uniform, responsive way that also gives stock and pricing details
 
 import { useEffect, useState } from "react"; // hooks - useState to store state (ddata that can change over time and triggers a re-render when updated), useEffect for side effects (thigns that happen outside of the normal render flow)
-import { useLocation, Link } from "react-router"; // useLocation = hook to read the URL query string (?search=... or ?category=...) - allows page to respond based on what user is looking for (makes call to backend via Axios accordingly + displays appropriate banner, page title and cards)
+import { useLocation, Link, useNavigate } from "react-router"; // useLocation = hook to read the URL query string (?search=... or ?category=...) - allows page to respond based on what user is looking for (makes call to backend via Axios accordingly + displays appropriate banner, page title and cards)
 // Link: for client-side navigation (react router provides routing capabilities for React applications; routing = handling navigation between different views w/o full page reloads) 
 import axios from "../api/axios"; // custom axios instance to make HTTP requests to my api
 
@@ -16,6 +16,7 @@ export default function TeasList() {
     const [teas, setTeas] = useState([]); // array of teas to display (initially empty)
     const [pageTitle, setPageTitle] = useState("Our Teas"); // title shown above the teas with default "Our Teas"
     const [bannerImage, setBannerImage] = useState("/categoryplaceholder.jpeg"); // banner image with default "placeholder"
+    const navigate = useNavigate(); // allows redirecting the user programmatically 
 
     useEffect(() => { // runs every time location.search changes (as specified in dependency array)
         const params = new URLSearchParams(location.search); // parses query params from the URL
